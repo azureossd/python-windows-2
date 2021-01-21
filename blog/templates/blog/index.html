@@ -1,0 +1,66 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+
+<div class="container">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+          <a class="text-muted" href="#">Labs</a>
+        </div>
+        <div class="col-4 text-center">
+          <a class="blog-header-logo text-dark" href="/">Azure OSS Blog</a>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          <a class="text-muted" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+          </a>
+          <a class="btn btn-sm btn-outline-secondary" href="/admin">Log in</a>
+        </div>
+      </div>
+    </header>
+    <div class="nav-scroller py-1 mb-2">
+      <nav class="nav d-flex justify-content-between">
+        <a class="p-2 text-muted" href="#">Azure Web Apps</a>
+        <a class="p-2 text-muted" href="#">Azure Functions</a>
+        <a class="p-2 text-muted" href="#">Linux Virtual Machines</a>
+      </nav>
+    </div>
+
+    <div class="card bg-dark text-white">
+        <img src="{% static 'images/background.png' %}" class="card-img" alt="...">
+    </div>
+
+    {% if latest_posts %}
+    <div class="row mb-2">
+        {% for post in latest_posts   %}
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+              <div class="card-body d-flex flex-column align-items-start">
+                <strong class="d-inline-block mb-2 text-primary">{{ post.tag }}</strong>
+                <h3 class="mb-0">
+                  <a class="text-dark" href="/{{ post.id }}">{{ post.post_title }}</a>
+                </h3>
+                <div class="mb-1 text-muted"><small class="text-muted">Last updated: {{ post.pub_date }}</small></div>
+                <p class="card-text mb-auto">{{ post.content }}</p>
+                <a href="/{{ post.id }}">Continue reading</a>
+              </div>
+              <img class="card-img-right flex-auto d-none d-md-block">
+            </div>
+          </div>
+        {% endfor %}
+
+    </div>
+    {% else %}
+    <div class="card">
+      <div class="card-body">
+        <p>No posts available... </p>
+      </div>
+    </div>
+    {% endif %}
+</div>
+
+<footer class="blog-footer">
+    <p>Azure App Service</p>
+    <p><a href="#">Back to top</a></p>
+</footer>

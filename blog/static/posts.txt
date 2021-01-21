@@ -1,0 +1,15 @@
+Title: Introduction to Azure App Service on Linux
+Content: Azure App Service is a fully managed compute platform that is optimized for hosting websites and web applications. Customers can use App Service on Linux to host web apps natively on Linux for supported application stacks. Languages: - App Service on Linux supports a number of Built-in images in order to increase developer productivity. Languages include: Node.js, Java (JRE 8 & JRE 11), PHP, Python, .NET Core and Ruby. Run az webapp list-runtimes --linux to view the latest languages and supported versions. If the runtime your application requires is not supported in the built-in images, there are instructions on how to build your own Docker image to deploy to Web App for Containers.
+Tag: Linux
+
+Title:Create a PHP app in App Service on Linux
+Content:App Service on Linux provides a highly scalable, self-patching web hosting service using the Linux operating system. This quickstart tutorial shows how to deploy a PHP app to Azure App Service on Linux using the Cloud Shell. Sample app running in Azure - You can follow the steps in this article using a Mac, Windows, or Linux machine.If you don't have an Azure subscription, create a free account before you begin.
+Tag: PHP
+
+Title:Create your Node.js application
+Content: Express is a popular framework for building and running Node.js applications. You can scaffold (create) a new Express application using the Express Generator tool. The Express Generator is shipped as an npm module and can be run directly (without installation) by using the npm command-line tool npx.
+Tag: NodeJS
+
+Title:Quickstart: Create a Python app in Azure App Service on Linux
+Content: In this quickstart, you deploy a Python web app to App Service on Linux, Azure's highly scalable, self-patching web hosting service. You use the local Azure command-line interface (CLI) on a Mac, Linux, or Windows computer. The web app you configure uses a free App Service tier, so you incur no costs in the course of this article. If you prefer to deploy apps through an IDE, see Deploy Python apps to App Service from Visual Studio Code.
+Tag: Python
