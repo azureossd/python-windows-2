@@ -25,7 +25,7 @@ SECRET_KEY = '=kpli-kjn@mk+-^ng+d%-frxc@c-_qr^i_6(+)m+ytm!11ue6@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
